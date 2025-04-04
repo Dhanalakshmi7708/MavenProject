@@ -7,24 +7,24 @@ public class IsPrimeNumber {
 		
 		//Prime Number - A Number can only divisible by 1 or that number
 
-		int n = 61;
-		
+		int n = 1010;
+		boolean isPrime = false; 
 		for (int i = 2; i <n; i++) //For loop to check the numbers till n-1 ==> 1, 2, 3,4,5
 			{
 			
 			// if condition to check given number is divided by i 
-			
+			//Loop1 2,true,2++
 			if (n%i ==0) {
+				//61%2 
 				System.out.println(n + " is not prime number"); //if number divides print not prime numbers
-				return;
+				isPrime = true;
+				break;
 			}
-			
-			else
-			{
-				System.out.println(n + " is prime number");//else print prime numbers
-				return;
-			}
-					
+								
+		}
+		
+		if (isPrime==false) {
+			System.out.println(n + "is Prime number");
 		}
 
 		}
