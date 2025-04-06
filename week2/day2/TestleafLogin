@@ -1,0 +1,23 @@
+package week2.day2;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestleafLogin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ChromeDriver drive = new ChromeDriver();// Launch Browser -ChromeBrowser
+		
+		drive.get("https://leaftaps.com/opentaps/control/main");//Load the Url
+		
+		drive.manage().window().maximize();//maximize the browser 
+		
+		drive.findElement(By.id("username")).sendKeys("demosalesmanager"); //Enter the username in the webpage
+		drive.findElement(By.id("password")).sendKeys("crmsfa");//Enter password in the webpage
+		drive.findElement(By.className("decorativeSubmit")).click(); // click on Login button
+		
+	}
+
+}
